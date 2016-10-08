@@ -60,14 +60,14 @@ namespace Mhacks
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f050017
-			public const int addPrescrip = 2131034135;
+			// aapt resource value: 0x7f050018
+			public const int addPrescrip = 2131034136;
 			
 			// aapt resource value: 0x7f050011
 			public const int doctorsName = 2131034129;
 			
-			// aapt resource value: 0x7f050018
-			public const int editPrescrip = 2131034136;
+			// aapt resource value: 0x7f050019
+			public const int editPrescrip = 2131034137;
 			
 			// aapt resource value: 0x7f050008
 			public const int howOften = 2131034120;
@@ -105,11 +105,14 @@ namespace Mhacks
 			// aapt resource value: 0x7f05000e
 			public const int numberDoses = 2131034126;
 			
-			// aapt resource value: 0x7f050016
-			public const int submit = 2131034134;
-			
 			// aapt resource value: 0x7f050015
-			public const int takePicture = 2131034133;
+			public const int pictureMed = 2131034133;
+			
+			// aapt resource value: 0x7f050016
+			public const int picturePrescrip = 2131034134;
+			
+			// aapt resource value: 0x7f050017
+			public const int submit = 2131034135;
 			
 			// aapt resource value: 0x7f050010
 			public const int text_DoctorsName = 2131034128;
@@ -132,8 +135,8 @@ namespace Mhacks
 			// aapt resource value: 0x7f05000a
 			public const int text_whatTime = 2131034122;
 			
-			// aapt resource value: 0x7f050019
-			public const int viewPrescrip = 2131034137;
+			// aapt resource value: 0x7f05001a
+			public const int viewPrescrip = 2131034138;
 			
 			// aapt resource value: 0x7f05000b
 			public const int whatTime = 2131034123;

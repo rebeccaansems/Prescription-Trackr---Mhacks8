@@ -22,6 +22,7 @@ namespace Mhacks
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.AddPrescrip);
 
+            //Add values to how often spinner
             Spinner howOftenSpinner = FindViewById<Spinner>(Resource.Id.howOften);
             List<string> howOftenAmounts = new List<string>();
             howOftenAmounts.Add("Monthly");

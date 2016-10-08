@@ -133,13 +133,31 @@
             android:layout_height="match_parent"
             android:id="@+id/medPurpose" />
     </LinearLayout>
-    <Button
-        android:text="Take Picture"
+    <LinearLayout
+        android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp"
-        android:id="@+id/takePicture" />
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:padding="5dp"
+        android:weightSum="2">
+        <Button
+            android:id="@+id/pictureMed"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Take Picture Medication"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:layout_weight="1" />
+        <Button
+            android:id="@+id/picturePrescrip"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Take Picture Prescription"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:layout_weight="1" />
+    </LinearLayout>
     <Button
         android:text="Submit"
         android:layout_width="match_parent"
