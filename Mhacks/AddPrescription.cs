@@ -22,6 +22,17 @@ namespace Mhacks
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.AddPrescrip);
 
+            Spinner howOftenSpinner = FindViewById<Spinner>(Resource.Id.howOften);
+            List<string> howOftenAmounts = new List<string>();
+            howOftenAmounts.Add("Monthly");
+            howOftenAmounts.Add("Weekly");
+            howOftenAmounts.Add("Daily");
+            howOftenAmounts.Add("Every 12 Hours");
+            howOftenAmounts.Add("Every 6 Hours");
+            howOftenAmounts.Add("Hourly");
+            ArrayAdapter adapter = new ArrayAdapter(this, Android.Resource.Layout.SimpleSpinnerItem, howOftenAmounts);
+            howOftenSpinner.Adapter = adapter;
+
         }
     }
 }
