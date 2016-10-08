@@ -73,7 +73,6 @@
             android:layout_height="match_parent"
             android:id="@+id/text_whatTime" />
         <EditText
-            android:inputType="time"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/whatTime" />
