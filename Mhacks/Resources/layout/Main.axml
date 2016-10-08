@@ -2,12 +2,20 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    >
-<Button  
-    android:id="@+id/MyButton"
-    android:layout_width="fill_parent" 
-    android:layout_height="wrap_content" 
-    android:text="@string/Hello"
-    />
+    android:layout_height="fill_parent">
+    <Button
+        android:text="Add Prescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/addPrescrip" />
+    <Button
+        android:text="Edit Prescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editPrescrip" />
+    <Button
+        android:text="View Prescriptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/viewPrescrip" />
 </LinearLayout>

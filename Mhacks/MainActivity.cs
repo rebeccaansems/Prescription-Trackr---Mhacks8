@@ -11,8 +11,6 @@ namespace Mhacks
     [Activity(Label = "Mhacks", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
-        int count = 1;
-
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
@@ -22,9 +20,15 @@ namespace Mhacks
 
             // Get our button from the layout resource,
             // and attach an event to it
-            Button button = FindViewById<Button>(Resource.Id.MyButton);
+            Button b_AddPrescrip = FindViewById<Button>(Resource.Id.addPrescrip);
+            Button b_EditPrescrip = FindViewById<Button>(Resource.Id.editPrescrip);
+            Button b_ViewPrescrip = FindViewById<Button>(Resource.Id.viewPrescrip);
 
-            button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
+            b_AddPrescrip.Click += delegate
+            {
+                StartActivity(typeof(AddPrescription));
+            };
+
         }
     }
 }
