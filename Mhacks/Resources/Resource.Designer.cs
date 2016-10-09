@@ -66,6 +66,9 @@ namespace Mhacks
 			// aapt resource value: 0x7f050016
 			public const int back = 2131034134;
 			
+			// aapt resource value: 0x7f050028
+			public const int clearData = 2131034152;
+			
 			// aapt resource value: 0x7f050011
 			public const int doctorsName = 2131034129;
 			

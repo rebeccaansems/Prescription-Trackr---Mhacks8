@@ -18,11 +18,14 @@ namespace Mhacks
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
+            StoredInfo.retrieveData();
+
             // Get our button from the layout resource,
             // and attach an event to it
             Button b_AddPrescrip = FindViewById<Button>(Resource.Id.addPrescrip);
             Button b_EditPrescrip = FindViewById<Button>(Resource.Id.editPrescrip);
             Button b_ViewPrescrip = FindViewById<Button>(Resource.Id.viewPrescrip);
+            Button b_ClearData = FindViewById<Button>(Resource.Id.clearData);
 
             b_AddPrescrip.Click += delegate
             {
@@ -37,6 +40,12 @@ namespace Mhacks
             b_ViewPrescrip.Click += delegate
             {
                 StartActivity(typeof(ViewPrescriptions));
+            };
+
+            b_ClearData.Click += delegate
+            {
+                StoredInfo.allPrescriptions = new System.Collections.Generic.List<MedicationItem>();
+                StoredInfo.saveData();
             };
         }
     }

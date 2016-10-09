@@ -15,5 +15,53 @@ namespace Mhacks
     class StoredInfo
     {
         public static List<MedicationItem> allPrescriptions = new List<MedicationItem>();
+
+        public static void saveData()
+        {
+            var prefs = Application.Context.GetSharedPreferences("Mhacks", FileCreationMode.Private);
+            var prefEditor = prefs.Edit();
+            prefEditor.PutInt("NumberOfPrescriptions", allPrescriptions.Count);
+            prefEditor.Commit();
+
+            for (int i = 0; i < allPrescriptions.Count; i++)
+            {
+                string data = allPrescriptions[i].medName + "|";
+                data += allPrescriptions[i].medAmount + "|";
+                data += allPrescriptions[i].whatTime + "|";
+                data += allPrescriptions[i].doctorsName + "|";
+                data += allPrescriptions[i].medPurpose + "|";
+                data += allPrescriptions[i].howOften + "|";
+                data += allPrescriptions[i].numDoses;
+
+                prefEditor.PutString("Prescription" + i, data);
+                prefEditor.Commit();
+            }
+        }
+
+        public static void retrieveData()
+        {
+            allPrescriptions = new List<MedicationItem>();
+
+            var prefs = Application.Context.GetSharedPreferences("Mhacks", FileCreationMode.Private);
+            int numberPrescriptions = prefs.GetInt("NumberOfPrescriptions", 0);
+            for (int i = 0; i < numberPrescriptions; i++)
+            {
+                string prescripData = prefs.GetString("Prescription" + i, null);
+                if (prescripData != null)
+                {
+                    MedicationItem mItem = new MedicationItem();
+                    string[] prescripDataPoints = prescripData.Split('|');
+                    mItem.medName = prescripDataPoints[0];
+                    mItem.medAmount = prescripDataPoints[1];
+                    mItem.whatTime = prescripDataPoints[2];
+                    mItem.doctorsName = prescripDataPoints[3];
+                    mItem.medPurpose = prescripDataPoints[4];
+                    mItem.howOften = int.Parse(prescripDataPoints[5]);
+                    mItem.numDoses = int.Parse(prescripDataPoints[6]);
+
+                    allPrescriptions.Add(mItem);
+                }
+            }
+        }
     }
 }

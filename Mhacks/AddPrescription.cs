@@ -18,6 +18,7 @@ namespace Mhacks
     {
         EditText medName, medAmount, numDoses, whatTime, doctorsName, medPurpose;
         Spinner howOftenSpinner;
+        Button submitButton;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -26,7 +27,7 @@ namespace Mhacks
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.AddPrescrip);
 
-            Button submitButton = FindViewById<Button>(Resource.Id.submit);
+            submitButton = FindViewById<Button>(Resource.Id.submit);
             Button backButton = FindViewById<Button>(Resource.Id.back);
             Button pictureMed = FindViewById<Button>(Resource.Id.pictureMed);
             Button picturePrecip = FindViewById<Button>(Resource.Id.picturePrescrip);
@@ -59,19 +60,27 @@ namespace Mhacks
             MedicationItem mitem = new MedicationItem();
             if (medName.Text.Equals("")) { mitem.medName = "N/A"; }
             else { mitem.medName = medName.Text; }
+
             if (medAmount.Text.Equals("")) { mitem.medAmount = "N/A"; }
             else { mitem.medAmount = medAmount.Text; }
+
             if (whatTime.Text.Equals("")) { mitem.whatTime = "N/A"; }
             else { mitem.whatTime = whatTime.Text; }
+
             mitem.howOften = (int)howOftenSpinner.SelectedItemId;
+
             if (numDoses.Text.Equals("")) { mitem.numDoses = 0; }
             else { mitem.numDoses = int.Parse(numDoses.Text); }
+
             if (doctorsName.Text.Equals("")) { mitem.doctorsName = "N/A"; }
             else { mitem.doctorsName = doctorsName.Text; }
+
             if (medPurpose.Text.Equals("")) { mitem.medPurpose = "N/A"; }
             else { mitem.medPurpose = medPurpose.Text; }
 
             StoredInfo.allPrescriptions.Add(mitem);
+            StoredInfo.saveData();
+
             StartActivity(typeof(MainActivity));
         }
         

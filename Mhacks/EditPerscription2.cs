@@ -80,6 +80,7 @@ namespace Mhacks
             else { mitem.medPurpose = medPurpose.Text; }
 
             StoredInfo.allPrescriptions[prescripNum] = mitem;
+            StoredInfo.saveData();
             StartActivity(typeof(MainActivity));
         }
 
