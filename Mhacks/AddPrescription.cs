@@ -16,7 +16,7 @@ namespace Mhacks
     [Activity(Label = "Mhacks", MainLauncher = false, Icon = "@drawable/icon")]
     class AddPrescription : Activity
     {
-        EditText medName, medAmount, numDoses, whatTime, doctorsName, medPurpose;
+        EditText medName, medAmount, numDoses, whatTime, doctorsName, prescripCode, medPurpose;
         Spinner howOftenSpinner;
         Button submitButton;
 
@@ -37,6 +37,7 @@ namespace Mhacks
             numDoses = FindViewById<EditText>(Resource.Id.numberDoses);
             whatTime = FindViewById<EditText>(Resource.Id.whatTime);
             doctorsName = FindViewById<EditText>(Resource.Id.doctorsName);
+            prescripCode = FindViewById<EditText>(Resource.Id.prescriptionCode);
             medPurpose = FindViewById<EditText>(Resource.Id.medPurpose);
 
             //Add values to how often spinner
@@ -57,7 +58,7 @@ namespace Mhacks
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            if (!(medName.Text.Equals("") && doctorsName.Text.Equals("")))
+            if (!(medName.Text.Equals("") || doctorsName.Text.Equals("") || prescripCode.Text.Equals("")))
             {
                 MedicationItem mitem = new MedicationItem();
                 if (medName.Text.Equals("")) { mitem.medName = "N/A"; }
@@ -76,6 +77,9 @@ namespace Mhacks
 
                 if (doctorsName.Text.Equals("")) { mitem.doctorsName = "N/A"; }
                 else { mitem.doctorsName = doctorsName.Text; }
+
+                if (prescripCode.Text.Equals("")) { mitem.prescripCode = "N/A"; }
+                else { mitem.prescripCode = prescripCode.Text; }
 
                 if (medPurpose.Text.Equals("")) { mitem.medPurpose = "N/A"; }
                 else { mitem.medPurpose = medPurpose.Text; }

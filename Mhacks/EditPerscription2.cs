@@ -17,7 +17,7 @@ namespace Mhacks
     {
         public static int prescripNum;
 
-        EditText medName, medAmount, numDoses, whatTime, doctorsName, medPurpose;
+        EditText medName, medAmount, numDoses, whatTime, doctorsName, prescripCode, medPurpose;
         Spinner howOftenSpinner;
 
         protected override void OnCreate(Bundle bundle)
@@ -48,6 +48,7 @@ namespace Mhacks
             numDoses = FindViewById<EditText>(Resource.Id.numberDoses);
             whatTime = FindViewById<EditText>(Resource.Id.whatTime);
             doctorsName = FindViewById<EditText>(Resource.Id.doctorsName);
+            prescripCode = FindViewById<EditText>(Resource.Id.prescriptionCode);
             medPurpose = FindViewById<EditText>(Resource.Id.medPurpose);
 
             medName.Text = StoredInfo.allPrescriptions[prescripNum].medName;
@@ -56,6 +57,7 @@ namespace Mhacks
             howOftenSpinner.SetSelection(StoredInfo.allPrescriptions[prescripNum].howOften);
             whatTime.Text = StoredInfo.allPrescriptions[prescripNum].whatTime;
             doctorsName.Text = StoredInfo.allPrescriptions[prescripNum].doctorsName;
+            prescripCode.Text = StoredInfo.allPrescriptions[prescripNum].prescripCode;
             medPurpose.Text = StoredInfo.allPrescriptions[prescripNum].medPurpose;
             
             saveButton.Click += SaveButton_Click;
@@ -64,7 +66,7 @@ namespace Mhacks
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            if (!(medName.Text.Equals("") && doctorsName.Text.Equals("")))
+            if (!(medName.Text.Equals("") || doctorsName.Text.Equals("") || prescripCode.Text.Equals("")))
             {
                 MedicationItem mitem = new MedicationItem();
                 if (medName.Text.Equals("")) { mitem.medName = "N/A"; }
@@ -78,6 +80,8 @@ namespace Mhacks
                 else { mitem.numDoses = int.Parse(numDoses.Text); }
                 if (doctorsName.Text.Equals("")) { mitem.doctorsName = "N/A"; }
                 else { mitem.doctorsName = doctorsName.Text; }
+                if (prescripCode.Text.Equals("")) { mitem.prescripCode = "N/A"; }
+                else { mitem.prescripCode = prescripCode.Text; }
                 if (medPurpose.Text.Equals("")) { mitem.medPurpose = "N/A"; }
                 else { mitem.medPurpose = medPurpose.Text; }
 

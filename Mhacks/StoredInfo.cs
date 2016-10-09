@@ -29,6 +29,7 @@ namespace Mhacks
                 data += allPrescriptions[i].medAmount + "|";
                 data += allPrescriptions[i].whatTime + "|";
                 data += allPrescriptions[i].doctorsName + "|";
+                data += allPrescriptions[i].prescripCode + "|";
                 data += allPrescriptions[i].medPurpose + "|";
                 data += allPrescriptions[i].howOften + "|";
                 data += allPrescriptions[i].numDoses;
@@ -55,9 +56,10 @@ namespace Mhacks
                     mItem.medAmount = prescripDataPoints[1];
                     mItem.whatTime = prescripDataPoints[2];
                     mItem.doctorsName = prescripDataPoints[3];
-                    mItem.medPurpose = prescripDataPoints[4];
-                    mItem.howOften = int.Parse(prescripDataPoints[5]);
-                    mItem.numDoses = int.Parse(prescripDataPoints[6]);
+                    mItem.prescripCode = prescripDataPoints[4];
+                    mItem.medPurpose = prescripDataPoints[5];
+                    mItem.howOften = int.Parse(prescripDataPoints[6]);
+                    mItem.numDoses = int.Parse(prescripDataPoints[7]);
 
                     allPrescriptions.Add(mItem);
                 }

@@ -17,7 +17,7 @@ namespace Mhacks
     {
         public static int prescripNum;
 
-        TextView medName, medAmount, numDoses, whatTime, doctorsName, medPurpose;
+        TextView medName, medAmount, numDoses, whatTime, doctorsName, prescripCode, medPurpose;
         Spinner howOftenSpinner;
 
         protected override void OnCreate(Bundle bundle)
@@ -45,6 +45,7 @@ namespace Mhacks
             numDoses = FindViewById<TextView>(Resource.Id.numberDoses);
             whatTime = FindViewById<TextView>(Resource.Id.whatTime);
             doctorsName = FindViewById<TextView>(Resource.Id.doctorsName);
+            prescripCode = FindViewById<TextView>(Resource.Id.prescriptionCode);
             medPurpose = FindViewById<TextView>(Resource.Id.medPurpose);
 
             medName.Text = StoredInfo.allPrescriptions[prescripNum].medName;
@@ -53,6 +54,7 @@ namespace Mhacks
             howOftenSpinner.SetSelection(StoredInfo.allPrescriptions[prescripNum].howOften);
             whatTime.Text = StoredInfo.allPrescriptions[prescripNum].whatTime;
             doctorsName.Text = StoredInfo.allPrescriptions[prescripNum].doctorsName;
+            prescripCode.Text = StoredInfo.allPrescriptions[prescripNum].prescripCode;
             medPurpose.Text = StoredInfo.allPrescriptions[prescripNum].medPurpose;
 
             howOftenSpinner.Enabled = false;
