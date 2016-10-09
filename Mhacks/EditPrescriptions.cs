@@ -17,6 +17,7 @@ namespace Mhacks
     {
         Button[] buttons;
         Button back;
+        public static bool justViewingPrescrips;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -53,11 +54,71 @@ namespace Mhacks
                 }
                 else
                 {
-                    buttons[i].Visibility = ViewStates.Gone;
+                    buttons[i].Visibility = ViewStates.Invisible;
                 }
-
             }
+
+            perscrip0.Click += Perscrip0_Click;
+            perscrip1.Click += Perscrip1_Click;
+            perscrip2.Click += Perscrip2_Click;
+            perscrip3.Click += Perscrip3_Click;
+            perscrip4.Click += Perscrip4_Click;
+            perscrip5.Click += Perscrip5_Click;
+            perscrip6.Click += Perscrip6_Click;
+            perscrip7.Click += Perscrip7_Click;
+            perscrip8.Click += Perscrip8_Click;
+            perscrip9.Click += Perscrip9_Click;
         }
 
+        private void Perscrip0_Click(object sender, EventArgs e)
+        {
+            EditPrescription2.prescripNum = 0;
+            StartActivity(typeof(EditPrescription2));
+        }
+        private void Perscrip1_Click(object sender, EventArgs e)
+        {
+            EditPrescription2.prescripNum = 1;
+            StartActivity(typeof(EditPrescription2));
+        }
+        private void Perscrip2_Click(object sender, EventArgs e)
+        {
+            EditPrescription2.prescripNum = 2;
+            StartActivity(typeof(EditPrescription2));
+        }
+        private void Perscrip3_Click(object sender, EventArgs e)
+        {
+            EditPrescription2.prescripNum = 3;
+            StartActivity(typeof(EditPrescription2));
+        }
+        private void Perscrip4_Click(object sender, EventArgs e)
+        {
+            EditPrescription2.prescripNum = 4;
+            StartActivity(typeof(EditPrescription2));
+        }
+        private void Perscrip5_Click(object sender, EventArgs e)
+        {
+            EditPrescription2.prescripNum = 5;
+            StartActivity(typeof(EditPrescription2));
+        }
+        private void Perscrip6_Click(object sender, EventArgs e)
+        {
+            EditPrescription2.prescripNum = 6;
+            StartActivity(typeof(EditPrescription2));
+        }
+        private void Perscrip7_Click(object sender, EventArgs e)
+        {
+            EditPrescription2.prescripNum = 7;
+            StartActivity(typeof(EditPrescription2));
+        }
+        private void Perscrip8_Click(object sender, EventArgs e)
+        {
+            EditPrescription2.prescripNum = 8;
+            StartActivity(typeof(EditPrescription2));
+        }
+        private void Perscrip9_Click(object sender, EventArgs e)
+        {
+            EditPrescription2.prescripNum = 9;
+            StartActivity(typeof(EditPrescription2));
+        }
     }
 }

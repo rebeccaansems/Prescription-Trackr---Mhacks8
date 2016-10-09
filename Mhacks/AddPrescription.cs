@@ -56,13 +56,13 @@ namespace Mhacks
         private void SubmitButton_Click(object sender, EventArgs e)
         {
             MedicationItem mitem = new MedicationItem();
-            mitem.medName = medName.Text ?? "";
-            mitem.medAmount = medAmount.Text ?? "";
-            mitem.howOften = howOftenSpinner.SelectedItem.ToString();
+            mitem.medName = medName.Text ?? "N/A";
+            mitem.medAmount = medAmount.Text ?? "N/A";
+            mitem.howOften = (int)howOftenSpinner.SelectedItemId;
             if (numDoses.Text.Equals("")){mitem.numDoses = 0;}
             else{mitem.numDoses = int.Parse(numDoses.Text);}
-            mitem.doctorsName = doctorsName.Text ?? "";
-            mitem.medPurpose = medPurpose.Text ?? "";
+            mitem.doctorsName = doctorsName.Text ?? "N/A";
+            mitem.medPurpose = medPurpose.Text ?? "N/A";
 
             StoredInfo.allPrescriptions.Add(mitem);
             StartActivity(typeof(MainActivity));

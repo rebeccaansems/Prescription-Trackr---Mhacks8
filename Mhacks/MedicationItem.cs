@@ -17,8 +17,8 @@ namespace Mhacks
     class MedicationItem
     {
 
-        public string medName, medAmount, howOften, whatTime, doctorsName, medPurpose;
-        public int  numDoses;
+        public string medName, medAmount, whatTime, doctorsName, medPurpose;
+        public int howOften, numDoses;
         public Bitmap picMed, pickPrescip;
 
     }
