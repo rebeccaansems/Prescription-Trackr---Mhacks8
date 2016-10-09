@@ -27,6 +27,7 @@ namespace Mhacks
             SetContentView(Resource.Layout.AddPrescrip);
 
             Button submitButton = FindViewById<Button>(Resource.Id.submit);
+            Button backButton = FindViewById<Button>(Resource.Id.back);
             Button pictureMed = FindViewById<Button>(Resource.Id.pictureMed);
             Button picturePrecip = FindViewById<Button>(Resource.Id.picturePrescrip);
 
@@ -36,7 +37,6 @@ namespace Mhacks
             whatTime = FindViewById<EditText>(Resource.Id.whatTime);
             doctorsName = FindViewById<EditText>(Resource.Id.doctorsName);
             medPurpose = FindViewById<EditText>(Resource.Id.medPurpose);
-
 
             //Add values to how often spinner
             howOftenSpinner = FindViewById<Spinner>(Resource.Id.howOften);
@@ -51,20 +51,32 @@ namespace Mhacks
             howOftenSpinner.Adapter = adapter;
 
             submitButton.Click += SubmitButton_Click;
+            backButton.Click += BackButton_Click;
         }
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
             MedicationItem mitem = new MedicationItem();
-            mitem.medName = medName.Text ?? "N/A";
-            mitem.medAmount = medAmount.Text ?? "N/A";
+            if (medName.Text.Equals("")) { mitem.medName = "N/A"; }
+            else { mitem.medName = medName.Text; }
+            if (medAmount.Text.Equals("")) { mitem.medAmount = "N/A"; }
+            else { mitem.medAmount = medAmount.Text; }
+            if (whatTime.Text.Equals("")) { mitem.whatTime = "N/A"; }
+            else { mitem.whatTime = whatTime.Text; }
             mitem.howOften = (int)howOftenSpinner.SelectedItemId;
-            if (numDoses.Text.Equals("")){mitem.numDoses = 0;}
-            else{mitem.numDoses = int.Parse(numDoses.Text);}
-            mitem.doctorsName = doctorsName.Text ?? "N/A";
-            mitem.medPurpose = medPurpose.Text ?? "N/A";
+            if (numDoses.Text.Equals("")) { mitem.numDoses = 0; }
+            else { mitem.numDoses = int.Parse(numDoses.Text); }
+            if (doctorsName.Text.Equals("")) { mitem.doctorsName = "N/A"; }
+            else { mitem.doctorsName = doctorsName.Text; }
+            if (medPurpose.Text.Equals("")) { mitem.medPurpose = "N/A"; }
+            else { mitem.medPurpose = medPurpose.Text; }
 
             StoredInfo.allPrescriptions.Add(mitem);
+            StartActivity(typeof(MainActivity));
+        }
+        
+        private void BackButton_Click(object sender, EventArgs e)
+        {
             StartActivity(typeof(MainActivity));
         }
     }

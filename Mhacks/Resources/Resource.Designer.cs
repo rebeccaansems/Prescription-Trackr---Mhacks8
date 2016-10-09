@@ -63,8 +63,8 @@ namespace Mhacks
 			// aapt resource value: 0x7f050025
 			public const int addPrescrip = 2131034149;
 			
-			// aapt resource value: 0x7f050023
-			public const int back = 2131034147;
+			// aapt resource value: 0x7f050016
+			public const int back = 2131034134;
 			
 			// aapt resource value: 0x7f050011
 			public const int doctorsName = 2131034129;
@@ -72,8 +72,8 @@ namespace Mhacks
 			// aapt resource value: 0x7f050026
 			public const int editPrescrip = 2131034150;
 			
-			// aapt resource value: 0x7f050022
-			public const int frameLayout1 = 2131034146;
+			// aapt resource value: 0x7f050015
+			public const int frameLayout1 = 2131034133;
 			
 			// aapt resource value: 0x7f050008
 			public const int howOften = 2131034120;
@@ -141,11 +141,11 @@ namespace Mhacks
 			// aapt resource value: 0x7f050021
 			public const int perscrip9 = 2131034145;
 			
-			// aapt resource value: 0x7f050015
-			public const int pictureMed = 2131034133;
+			// aapt resource value: 0x7f050022
+			public const int pictureMed = 2131034146;
 			
-			// aapt resource value: 0x7f050016
-			public const int picturePrescrip = 2131034134;
+			// aapt resource value: 0x7f050023
+			public const int picturePrescrip = 2131034147;
 			
 			// aapt resource value: 0x7f050024
 			public const int save = 2131034148;
