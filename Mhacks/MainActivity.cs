@@ -17,7 +17,6 @@ namespace Mhacks
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
-            StoredInfo si = new StoredInfo();
 
             // Get our button from the layout resource,
             // and attach an event to it
@@ -28,6 +27,11 @@ namespace Mhacks
             b_AddPrescrip.Click += delegate
             {
                 StartActivity(typeof(AddPrescription));
+            };
+
+            b_EditPrescrip.Click += delegate
+            {
+                StartActivity(typeof(EditPrescriptions));
             };
 
         }

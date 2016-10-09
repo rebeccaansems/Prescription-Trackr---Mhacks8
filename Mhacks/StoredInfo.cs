@@ -14,9 +14,6 @@ namespace Mhacks
 {
     class StoredInfo
     {
-        public static List<MedicationItem> allPrescriptions;
-
-        public StoredInfo() { allPrescriptions = new List<MedicationItem>(); }
-
+        public static List<MedicationItem> allPrescriptions = new List<MedicationItem>();
     }
 }
