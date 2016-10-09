@@ -34,6 +34,10 @@ namespace Mhacks
                 StartActivity(typeof(EditPrescriptions));
             };
 
+            b_ViewPrescrip.Click += delegate
+            {
+                StartActivity(typeof(ViewPrescriptions));
+            };
         }
     }
 }

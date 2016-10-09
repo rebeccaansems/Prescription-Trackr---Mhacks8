@@ -146,14 +146,16 @@
         android:gravity="center_horizontal"
         android:padding="5dp"
         android:weightSum="2">
-        <Image
+        <ImageView
+            android:src="@android:drawable/ic_menu_gallery"
             android:id="@+id/pictureMed"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
             android:layout_weight="1" />
-        <Image
+        <ImageView
+            android:src="@android:drawable/ic_menu_gallery"
             android:id="@+id/picturePrescrip"
             android:layout_width="0dp"
             android:layout_height="match_parent"

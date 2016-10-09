@@ -50,7 +50,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddPrescription.cs" />
+    <Compile Include="ViewPrescriptions2.cs" />
     <Compile Include="EditPerscription2.cs" />
+    <Compile Include="ViewPrescriptions.cs" />
     <Compile Include="EditPrescriptions.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="MedicationItem.cs" />
