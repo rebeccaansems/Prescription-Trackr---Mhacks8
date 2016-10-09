@@ -81,7 +81,7 @@ namespace Mhacks
 
             StoredInfo.allPrescriptions[prescripNum] = mitem;
             StoredInfo.saveData();
-            StartActivity(typeof(MainActivity));
+            StartActivity(typeof(EditPrescriptions));
         }
 
         private void BackButton_Click(object sender, EventArgs e)

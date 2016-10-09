@@ -62,7 +62,7 @@ namespace Mhacks
 
         private void BackButton_Click(object sender, EventArgs e)
         {
-            StartActivity(typeof(MainActivity));
+            StartActivity(typeof(ViewPrescriptions));
         }
     }
 }

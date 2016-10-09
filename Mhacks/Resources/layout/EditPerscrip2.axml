@@ -89,6 +89,7 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_width="170dp"
             android:layout_height="match_parent"
+            android:inputType="number"
             android:id="@+id/text_NumberDoses" />
         <EditText
             android:layout_width="match_parent"
