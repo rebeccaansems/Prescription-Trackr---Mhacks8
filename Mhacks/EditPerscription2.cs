@@ -64,24 +64,27 @@ namespace Mhacks
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            MedicationItem mitem = new MedicationItem();
-            if (medName.Text.Equals("")) { mitem.medName = "N/A"; }
-            else { mitem.medName = medName.Text; }
-            if (medAmount.Text.Equals("")) { mitem.medAmount = "N/A"; }
-            else { mitem.medAmount = medAmount.Text; }
-            if (whatTime.Text.Equals("")) { mitem.whatTime = "N/A"; }
-            else { mitem.whatTime = whatTime.Text; }
-            mitem.howOften = (int)howOftenSpinner.SelectedItemId;
-            if (numDoses.Text.Equals("")) { mitem.numDoses = 0; }
-            else { mitem.numDoses = int.Parse(numDoses.Text); }
-            if (doctorsName.Text.Equals("")) { mitem.doctorsName = "N/A"; }
-            else { mitem.doctorsName = doctorsName.Text; }
-            if (medPurpose.Text.Equals("")) { mitem.medPurpose = "N/A"; }
-            else { mitem.medPurpose = medPurpose.Text; }
+            if (!(medName.Text.Equals("") && doctorsName.Text.Equals("")))
+            {
+                MedicationItem mitem = new MedicationItem();
+                if (medName.Text.Equals("")) { mitem.medName = "N/A"; }
+                else { mitem.medName = medName.Text; }
+                if (medAmount.Text.Equals("")) { mitem.medAmount = "N/A"; }
+                else { mitem.medAmount = medAmount.Text; }
+                if (whatTime.Text.Equals("")) { mitem.whatTime = "N/A"; }
+                else { mitem.whatTime = whatTime.Text; }
+                mitem.howOften = (int)howOftenSpinner.SelectedItemId;
+                if (numDoses.Text.Equals("")) { mitem.numDoses = 0; }
+                else { mitem.numDoses = int.Parse(numDoses.Text); }
+                if (doctorsName.Text.Equals("")) { mitem.doctorsName = "N/A"; }
+                else { mitem.doctorsName = doctorsName.Text; }
+                if (medPurpose.Text.Equals("")) { mitem.medPurpose = "N/A"; }
+                else { mitem.medPurpose = medPurpose.Text; }
 
-            StoredInfo.allPrescriptions[prescripNum] = mitem;
-            StoredInfo.saveData();
-            StartActivity(typeof(EditPrescriptions));
+                StoredInfo.allPrescriptions[prescripNum] = mitem;
+                StoredInfo.saveData();
+                StartActivity(typeof(EditPrescriptions));
+            }
         }
 
         private void BackButton_Click(object sender, EventArgs e)

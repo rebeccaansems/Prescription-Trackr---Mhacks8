@@ -12,14 +12,17 @@
         android:paddingTop="5dp"
         android:id="@+id/linearLayout1">
         <TextView
-            android:text="Medication Name"
+            android:text="Medication Name: "
+            android:textStyle="bold"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="170dp"
+            android:layout_width="180dp"
             android:layout_height="match_parent"
             android:id="@+id/text_MedName" />
         <EditText
+            android:textStyle="bold"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:singleLine="true"
             android:id="@+id/medName" />
     </LinearLayout>
     <LinearLayout
@@ -30,14 +33,15 @@
         android:paddingRight="5dp"
         android:id="@+id/linearLayout2">
         <TextView
-            android:text="Medication Amount"
+            android:text="Medication Amount: "
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="170dp"
+            android:layout_width="180dp"
             android:layout_height="match_parent"
             android:id="@+id/text_MedAmount" />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:singleLine="true"
             android:id="@+id/medAmount" />
     </LinearLayout>
     <LinearLayout
@@ -48,15 +52,16 @@
         android:paddingRight="5dp"
         android:id="@+id/linearLayout4">
         <TextView
-            android:text="How Often"
+            android:text="How Often: "
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="170dp"
+            android:layout_width="180dp"
             android:layout_height="match_parent"
             android:id="@+id/text_howOften" />
         <Spinner
             android:text="N/A"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:singleLine="true"
             android:id="@+id/howOften" />
     </LinearLayout>
     <LinearLayout
@@ -67,15 +72,16 @@
         android:paddingRight="5dp"
         android:id="@+id/linearLayout5">
         <TextView
-            android:text="What Time"
+            android:text="What Time: "
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="170dp"
+            android:layout_width="180dp"
             android:layout_height="match_parent"
             android:id="@+id/text_whatTime" />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="time"
+            android:singleLine="true"
             android:id="@+id/whatTime" />
     </LinearLayout>
     <LinearLayout
@@ -86,15 +92,16 @@
         android:paddingRight="5dp"
         android:id="@+id/linearLayout6">
         <TextView
-            android:text="Number Doses"
+            android:text="Number Doses: "
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="170dp"
+            android:layout_width="180dp"
             android:layout_height="match_parent"
             android:id="@+id/text_NumberDoses" />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="number"
+            android:singleLine="true"
             android:id="@+id/numberDoses" />
     </LinearLayout>
     <LinearLayout
@@ -105,14 +112,16 @@
         android:paddingRight="5dp"
         android:id="@+id/linearLayout7">
         <TextView
-            android:text="Doctors Name"
+            android:text="Doctors Name: "
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="170dp"
+            android:layout_width="180dp"
+            android:textStyle="bold"
             android:layout_height="match_parent"
             android:id="@+id/text_DoctorsName" />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:singleLine="true"
             android:id="@+id/doctorsName" />
     </LinearLayout>
     <LinearLayout
@@ -123,9 +132,9 @@
         android:paddingRight="5dp"
         android:id="@+id/linearLayout8">
         <TextView
-            android:text="Medication Purpose"
+            android:text="Medication Purpose: "
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="170dp"
+            android:layout_width="180dp"
             android:layout_height="match_parent"
             android:id="@+id/text_MedPurpose" />
         <EditText
