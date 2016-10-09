@@ -60,20 +60,23 @@ namespace Mhacks
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f050027
-			public const int addPrescrip = 2131034151;
+			// aapt resource value: 0x7f050028
+			public const int addPrescrip = 2131034152;
 			
 			// aapt resource value: 0x7f050018
 			public const int back = 2131034136;
 			
-			// aapt resource value: 0x7f05002a
-			public const int clearData = 2131034154;
+			// aapt resource value: 0x7f05002b
+			public const int clearData = 2131034155;
+			
+			// aapt resource value: 0x7f050026
+			public const int delete = 2131034150;
 			
 			// aapt resource value: 0x7f050011
 			public const int doctorsName = 2131034129;
 			
-			// aapt resource value: 0x7f050028
-			public const int editPrescrip = 2131034152;
+			// aapt resource value: 0x7f050029
+			public const int editPrescrip = 2131034153;
 			
 			// aapt resource value: 0x7f050017
 			public const int frameLayout1 = 2131034135;
@@ -153,8 +156,8 @@ namespace Mhacks
 			// aapt resource value: 0x7f050013
 			public const int prescriptionCode = 2131034131;
 			
-			// aapt resource value: 0x7f050026
-			public const int save = 2131034150;
+			// aapt resource value: 0x7f050027
+			public const int save = 2131034151;
 			
 			// aapt resource value: 0x7f050019
 			public const int submit = 2131034137;
@@ -183,8 +186,8 @@ namespace Mhacks
 			// aapt resource value: 0x7f05000a
 			public const int text_whatTime = 2131034122;
 			
-			// aapt resource value: 0x7f050029
-			public const int viewPrescrip = 2131034153;
+			// aapt resource value: 0x7f05002a
+			public const int viewPrescrip = 2131034154;
 			
 			// aapt resource value: 0x7f05000b
 			public const int whatTime = 2131034123;

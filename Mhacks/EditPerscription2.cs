@@ -40,6 +40,7 @@ namespace Mhacks
 
             Button saveButton = FindViewById<Button>(Resource.Id.save);
             Button backButton = FindViewById<Button>(Resource.Id.back);
+            Button deleteButton = FindViewById<Button>(Resource.Id.delete);
             Button pictureMed = FindViewById<Button>(Resource.Id.pictureMed);
             Button picturePrecip = FindViewById<Button>(Resource.Id.picturePrescrip);
 
@@ -62,6 +63,7 @@ namespace Mhacks
             
             saveButton.Click += SaveButton_Click;
             backButton.Click += BackButton_Click;
+            deleteButton.Click += DeleteButton_Click;
         }
 
         private void SaveButton_Click(object sender, EventArgs e)
@@ -93,6 +95,13 @@ namespace Mhacks
 
         private void BackButton_Click(object sender, EventArgs e)
         {
+            StartActivity(typeof(EditPrescriptions));
+        }
+
+        private void DeleteButton_Click(object sender, EventArgs e)
+        {
+            StoredInfo.allPrescriptions.Remove(StoredInfo.allPrescriptions[prescripNum]);
+            StoredInfo.saveData();
             StartActivity(typeof(EditPrescriptions));
         }
     }
